@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootsrtap Task 5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <form class="col-5 container mt-3 rounded p-3 needs-validation" style="background-color: #e2e7ec" novalidate>
+        <div class="row">
+            <div class="col-4 text-center p-2">
+                <label for="fname" class="">First Name</label>
+            </div>
+            <div class="col-8">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">icon</span>
+                    <input type="text" class="form-control" placeholder="First Name" required>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please supply your first Name</div>
+                  </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4 text-center p-2">
+                <label for="lname" class="">Last Name</label>
+            </div>
+            <div class="col-8">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">icon</span>
+                    <input type="text" class="form-control" placeholder="Last Name" required>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please supply your last Name</div>
+                  </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4 text-center p-2">
+                <label for="lname" class="">E-Mail</label>
+            </div>
+            <div class="col-8">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">icon</span>
+                    <input type="email" class="form-control" placeholder="E-Mail Address" required>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please supply your email <address></address></div>
+                  </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4 text-center p-2">
+                <label for="lname" class="">Phone #</label>
+            </div>
+            <div class="col-8">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">icon</span>
+                    <input type="tel" class="form-control" placeholder="(845)555-1212" required>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please supply your phone number</div>
+                  </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4 text-center p-2">
+                <label for="lname" class="">Address</label>
+            </div>
+            <div class="col-8">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">icon</span>
+                    <input type="text" class="form-control" placeholder="Address" required>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please supply your street address</div>
+                  </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4 text-center p-2">
+                <label for="lname" class="">City</label>
+            </div>
+            <div class="col-8">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">icon</span>
+                    <input type="text" class="form-control" placeholder="city" required>
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Please supply your city</div>
+                  </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4 text-center p-2">
+                <label for="lname" class="">State</label>
+            </div>  
+            <div class="col-8">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">icon</span>
+                    <select class="form-select" id="sel1" name="sellist">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+            </div>    
+        </div>
+
+        <div class="row">
+            <div class="col-4 text-center p-2">
+                <label for="hosting" class="">Do you have hosting?</label>
+            </div>
+            <div class="col-8">
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="radio1" name="optradio" value="yes" checked>Yes
+                    <label class="form-check-label" for="radio1"></label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="radio2" name="optradio" value="no">No
+                    <label class="form-check-label" for="radio2"></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4 text-center p-2">
+                <label for="projdesc" class="">Project Description</label>
+            </div>
+            <div class="col-8">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">icon</span>
+                    <textarea class="form-control" rows="2" id="comment" placeholder="Project Description"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <button type="submit" class="btn btn-warning col-2 text-light">Submit</button>
+        </div>
+    </form>
+    <script>
+        (function () {
+        'use strict'
+        var forms = document.querySelectorAll('.needs-validation')
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+            }, false)
+            })
+        })();
+    </script>
+</body>
+</html>

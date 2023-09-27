@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Date and Time Display</title>
+</head>
+<body>
+  <h1>Date and Time Display</h1>
+  
+  <button id="showDateButton">Show Date</button>
+  <p id="dateOutput"></p>
+  
+  <button id="showTimeButton">Show Time</button>
+  <p id="timeOutput"></p>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const showDateButton = document.getElementById("showDateButton");
+      const dateOutput = document.getElementById("dateOutput");
+
+      const showTimeButton = document.getElementById("showTimeButton");
+      const timeOutput = document.getElementById("timeOutput");
+
+      showDateButton.addEventListener("click", function () {
+        const currentDate = new Date();
+        const formattedDate = currentDate.toDateString();
+        dateOutput.textContent = `Current Date: ${formattedDate}`;
+      });
+
+      showTimeButton.addEventListener("click", function () {
+        const currentTime = new Date();
+        const formattedTime = currentTime.toLocaleTimeString();
+        timeOutput.textContent = `Current Time: ${formattedTime}`;
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Task 7</title>
+</head>
+<body>
+    <h1>Click Buttons to Control GIF Animation</h1>
+
+    <img id="gifImage" src="train-3360_256.gif" alt="Animated GIF">
+    <br><br>
+    
+    <button id="startButton">Start</button>
+    <button id="stopButton">Stop</button>
+
+    <script>
+        var gifImage = document.getElementById("gifImage");
+        var staticimage = document.getElementById("gifImage");
+        var startButton = document.getElementById("startButton");
+        var stopButton = document.getElementById("stopButton");
+        var isPlaying = false;
+        var originalSrc = gifImage.src;
+        function startAnimation() {
+            if (!isPlaying) {
+                gifImage.src = originalSrc;
+                isPlaying = true;
+            }
+        }
+        function stopAnimation() {
+            if (isPlaying) {
+                gifImage.src = "Screenshot (64).png";
+                isPlaying = false;
+            }
+        }
+        startButton.addEventListener("click", startAnimation);
+        stopButton.addEventListener("click", stopAnimation);
+    </script>
+</body>
+</html>

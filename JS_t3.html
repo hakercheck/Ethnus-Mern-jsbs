@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Javascript Task 3</title>
+</head>
+<body>
+  <div style="border: 2px solid black;">
+    <form id="calculatorForm">
+        <div class="row col-4">
+            <label for="firstNumber">Enter the 1st number: </label>
+            <input type="text" id="firstNumber" required>
+        </div>
+        <div class="row col-4">
+            <label for="secondNumber">Enter the 2nd number: </label>
+            <input type="text" id="secondNumber" required>
+        </div>
+        <div class="row col-4">
+            <button type="button" id="multiplyButton">Multiply</button>
+            <button type="button" id="divideButton">Divide</button>
+        </div>
+    </form>
+
+    <div id="result">
+        <p>Result:</p>
+        <p id="output"></p>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const firstNumberInput = document.getElementById("firstNumber");
+      const secondNumberInput = document.getElementById("secondNumber");
+      const multiplyButton = document.getElementById("multiplyButton");
+      const divideButton = document.getElementById("divideButton");
+      const resultOutput = document.getElementById("output");
+
+      multiplyButton.addEventListener("click", function () {
+        const firstNumber = parseFloat(firstNumberInput.value);
+        const secondNumber = parseFloat(secondNumberInput.value);
+
+        if (isNaN(firstNumber) || isNaN(secondNumber)) {
+          resultOutput.textContent = "Invalid input. Please enter valid numbers.";
+        } else {
+          const product = firstNumber * secondNumber;
+          resultOutput.textContent = `Result of multiplication: ${product}`;
+        }
+      });
+
+      divideButton.addEventListener("click", function () {
+        const firstNumber = parseFloat(firstNumberInput.value);
+        const secondNumber = parseFloat(secondNumberInput.value);
+
+        if (isNaN(firstNumber) || isNaN(secondNumber)) {
+          resultOutput.textContent = "Invalid input. Please enter valid numbers.";
+        } else if (secondNumber === 0) {
+          resultOutput.textContent = "Cannot divide by zero.";
+        } else {
+          const quotient = firstNumber / secondNumber;
+          resultOutput.textContent = `Result of division: ${quotient}`;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
